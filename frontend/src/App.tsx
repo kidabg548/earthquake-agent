@@ -1,11 +1,11 @@
 // frontend/src/App.tsx
 import { useState, useEffect, useCallback } from "react";
-import "./App.css"; // Ensure this file is using the general styles
+import "./App.css";
 import earthquakeService, { Earthquake } from "./services/earthquakeService";
 import EarthquakeList from "./components/EarthquakeList";
 import MapView from "./components/MapView";
 import NearbyEarthquakes from "./components/NearbyEarthquakes";
-
+import EarthquakeAdvice from "./components/EarthquakeAdvice";
 
 
 interface UserLocation {
@@ -22,7 +22,6 @@ function App() {
         longitude: null,
     });
 
-    // State for additional filters (magnitude range, etc.)
     const [minMagnitude, setMinMagnitude] = useState<number | null>(null);
     const [maxMagnitude, setMaxMagnitude] = useState<number | null>(null);
 
@@ -31,9 +30,8 @@ function App() {
         setLoading(true);
         setError(null);
         try {
-            const params: any = {}; // Start with an empty object
+            const params: any = {};
 
-            // Add location parameters if valid
             if (userLocation.latitude !== null && userLocation.longitude !== null) {
                 if (!isNaN(userLocation.latitude) && !isNaN(userLocation.longitude)) {
                     params.user_latitude = userLocation.latitude;
@@ -43,7 +41,6 @@ function App() {
                 }
             }
 
-            //Add magnitude filters if valid
             if (minMagnitude !== null) {
                 if (!isNaN(minMagnitude)) {
                     params.minmagnitude = minMagnitude;
@@ -69,7 +66,7 @@ function App() {
         } finally {
             setLoading(false);
         }
-    }, [userLocation, minMagnitude, maxMagnitude]); // Dependencies:  userLocation, minMagnitude, maxMagnitude
+    }, [userLocation, minMagnitude, maxMagnitude]);
 
     useEffect(() => {
         fetchEarthquakeData();
@@ -86,12 +83,10 @@ function App() {
 
     return (
         <div className="container mx-auto p-6">
-            {/* Header */}
             <header className="mb-8 flex items-center justify-between">
                 <h1 className="text-3xl font-semibold text-gray-800">Earthquake Monitor</h1>
             </header>
 
-            {/* Main Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <EarthquakeList earthquakes={earthquakes} />
@@ -101,10 +96,12 @@ function App() {
                 </div>
             </div>
 
-            {/* Nearby Earthquakes Section */}
             <div className="mt-6 p-4 bg-white rounded-lg shadow-md">
                 <NearbyEarthquakes />
             </div>
+
+            {/* Advice Section */}
+            <EarthquakeAdvice/>
         </div>
     );
 }

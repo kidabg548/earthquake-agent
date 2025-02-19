@@ -101,5 +101,16 @@ const getEarthquakePrediction = async (
   }
 };
 
-const earthquakeService = { getAll, getHeatmapData, getNearbyEarthquakes, getEarthquakePrediction };
+const getEarthquakeAdvice = async (latitude: number, longitude: number): Promise<{ advice: string }> => {
+  const response = await fetch(`/earthquakes/advice?latitude=${latitude}&longitude=${longitude}`);
+
+  if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+
+  return await response.json();
+};
+
+
+const earthquakeService = { getAll, getHeatmapData, getNearbyEarthquakes, getEarthquakePrediction, getEarthquakeAdvice };
 export default earthquakeService;
