@@ -3874,3 +3874,92 @@ AttributeError: 'EarthquakeDataFetcher' object has no attribute 'train_earthquak
 2025-02-19 11:50:04,701 - WARNING -  * Debugger is active!
 2025-02-19 11:50:04,707 - INFO -  * Debugger PIN: 103-898-193
 2025-02-19 11:50:11,476 - INFO - 127.0.0.1 - - [19/Feb/2025 11:50:11] "GET /earthquakes/predict?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 13:04:44,245 - ERROR - GEMINI_API_KEY not set in environment variables. Earthquake advice endpoint will not function.
+2025-02-19 13:04:46,565 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-02-19 13:04:46,566 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 13:04:46,609 - INFO -  * Restarting with stat
+2025-02-19 13:04:58,739 - WARNING -  * Debugger is active!
+2025-02-19 13:04:58,746 - INFO -  * Debugger PIN: 579-620-689
+2025-02-19 13:05:16,312 - INFO - 127.0.0.1 - - [19/Feb/2025 13:05:16] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:05:20,246 - INFO - 127.0.0.1 - - [19/Feb/2025 13:05:20] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:06:36,062 - INFO - 127.0.0.1 - - [19/Feb/2025 13:06:36] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:06:36,617 - INFO - 127.0.0.1 - - [19/Feb/2025 13:06:36] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:06:40,132 - INFO - 127.0.0.1 - - [19/Feb/2025 13:06:40] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:06:44,929 - INFO - 127.0.0.1 - - [19/Feb/2025 13:06:44] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:06:53,991 - INFO - 127.0.0.1 - - [19/Feb/2025 13:06:53] "[33mGET /earthquakes/advice?latitude=12.97159875&longitude=77.5945664 HTTP/1.1[0m" 404 -
+2025-02-19 13:29:21,619 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-02-19 13:29:21,620 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 13:29:21,622 - INFO -  * Restarting with stat
+2025-02-19 13:29:32,974 - WARNING -  * Debugger is active!
+2025-02-19 13:29:32,983 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 13:29:41,218 - INFO - 127.0.0.1 - - [19/Feb/2025 13:29:41] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:29:44,035 - INFO - 127.0.0.1 - - [19/Feb/2025 13:29:44] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:35:11,787 - INFO -  * Detected change in 'C:\\Users\\kall\\Desktop\\earthquake-alert\\backend\\app.py', reloading
+2025-02-19 13:35:17,543 - INFO -  * Restarting with stat
+2025-02-19 13:35:43,892 - WARNING -  * Debugger is active!
+2025-02-19 13:35:43,905 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 13:35:52,291 - INFO - 127.0.0.1 - - [19/Feb/2025 13:35:52] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:35:52,338 - INFO - 127.0.0.1 - - [19/Feb/2025 13:35:52] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:37:27,610 - INFO - 127.0.0.1 - - [19/Feb/2025 13:37:27] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:37:34,840 - INFO - 127.0.0.1 - - [19/Feb/2025 13:37:34] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:50:10,888 - INFO - 127.0.0.1 - - [19/Feb/2025 13:50:10] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:50:18,676 - INFO - 127.0.0.1 - - [19/Feb/2025 13:50:18] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:50:22,437 - INFO - 127.0.0.1 - - [19/Feb/2025 13:50:22] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:50:26,663 - INFO - 127.0.0.1 - - [19/Feb/2025 13:50:26] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 13:52:48,863 - INFO - 127.0.0.1 - - [19/Feb/2025 13:52:48] "GET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 13:53:21,096 - INFO - 127.0.0.1 - - [19/Feb/2025 13:53:21] "GET /earthquakes/nearby?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 13:54:01,123 - INFO - 127.0.0.1 - - [19/Feb/2025 13:54:01] "GET /earthquakes/advice?latitude=8.8742&longitude=125.7275 HTTP/1.1" 200 -
+2025-02-19 13:54:59,290 - INFO - 127.0.0.1 - - [19/Feb/2025 13:54:59] "GET /earthquakes/predict?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 13:56:16,327 - INFO - 127.0.0.1 - - [19/Feb/2025 13:56:16] "GET /earthquakes/advice?latitude=8.8742&longitude=125.7275 HTTP/1.1" 200 -
+2025-02-19 14:06:10,403 - INFO -  * Detected change in 'C:\\Users\\kall\\Desktop\\earthquake-alert\\backend\\app.py', reloading
+2025-02-19 14:06:49,970 - INFO -  * Restarting with stat
+2025-02-19 14:08:58,444 - WARNING -  * Debugger is active!
+2025-02-19 14:08:58,464 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 14:08:59,447 - INFO - 127.0.0.1 - - [19/Feb/2025 14:08:59] "[33mGET /earthquakes/advice?latitude=8.8742&longitude=125.7275 HTTP/1.1[0m" 404 -
+2025-02-19 14:09:11,164 - INFO - 127.0.0.1 - - [19/Feb/2025 14:09:11] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:09:11,244 - INFO - 127.0.0.1 - - [19/Feb/2025 14:09:11] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:09:35,404 - INFO - 127.0.0.1 - - [19/Feb/2025 14:09:35] "[33mGET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1[0m" 404 -
+2025-02-19 14:10:04,815 - INFO -  * Detected change in 'C:\\Users\\kall\\Desktop\\earthquake-alert\\backend\\app.py', reloading
+2025-02-19 14:10:06,998 - INFO -  * Restarting with stat
+2025-02-19 14:10:29,372 - WARNING -  * Debugger is active!
+2025-02-19 14:10:29,395 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 14:10:35,183 - INFO - 127.0.0.1 - - [19/Feb/2025 14:10:35] "GET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:12:01,001 - INFO -  * Detected change in 'C:\\Users\\kall\\Desktop\\earthquake-alert\\backend\\app.py', reloading
+2025-02-19 14:12:03,212 - INFO -  * Restarting with stat
+2025-02-19 14:12:27,530 - WARNING -  * Debugger is active!
+2025-02-19 14:12:27,540 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 14:12:28,199 - INFO - 127.0.0.1 - - [19/Feb/2025 14:12:28] "[33mGET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1[0m" 404 -
+2025-02-19 14:12:57,727 - INFO - 127.0.0.1 - - [19/Feb/2025 14:12:57] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:13:02,397 - INFO - 127.0.0.1 - - [19/Feb/2025 14:13:02] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:13:48,194 - INFO - 127.0.0.1 - - [19/Feb/2025 14:13:48] "[33mGET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1[0m" 404 -
+2025-02-19 14:15:53,556 - INFO - 127.0.0.1 - - [19/Feb/2025 14:15:53] "[31m[1mGET /earthquakes/data?latitude=&longitude= HTTP/1.1[0m" 400 -
+2025-02-19 14:16:14,568 - INFO - 127.0.0.1 - - [19/Feb/2025 14:16:14] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:16:14,617 - INFO - 127.0.0.1 - - [19/Feb/2025 14:16:14] "[33mPOST /gemini HTTP/1.1[0m" 404 -
+2025-02-19 14:33:43,335 - INFO - 127.0.0.1 - - [19/Feb/2025 14:33:43] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:33:45,842 - INFO - 127.0.0.1 - - [19/Feb/2025 14:33:45] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:36:16,206 - INFO - 127.0.0.1 - - [19/Feb/2025 14:36:16] "[33mGET /earthquakes/advice?latitude=9.145&longitude=40.4897 HTTP/1.1[0m" 404 -
+2025-02-19 14:39:53,833 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2025-02-19 14:39:53,834 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 14:39:53,838 - INFO -  * Restarting with stat
+2025-02-19 14:40:06,744 - WARNING -  * Debugger is active!
+2025-02-19 14:40:06,750 - INFO -  * Debugger PIN: 103-898-193
+2025-02-19 14:40:10,530 - INFO - 127.0.0.1 - - [19/Feb/2025 14:40:10] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:40:12,507 - INFO - 127.0.0.1 - - [19/Feb/2025 14:40:12] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:40:36,273 - INFO - 127.0.0.1 - - [19/Feb/2025 14:40:36] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:40:36,295 - INFO - 127.0.0.1 - - [19/Feb/2025 14:40:36] "[33mPOST /gemini HTTP/1.1[0m" 404 -
+2025-02-19 14:41:55,168 - INFO - 127.0.0.1 - - [19/Feb/2025 14:41:55] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 14:42:14,082 - INFO - 127.0.0.1 - - [19/Feb/2025 14:42:14] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:43:16,300 - INFO - 127.0.0.1 - - [19/Feb/2025 14:43:16] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:44:01,444 - INFO - 127.0.0.1 - - [19/Feb/2025 14:44:01] "GET /earthquakes/nearby?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:44:12,264 - INFO - 127.0.0.1 - - [19/Feb/2025 14:44:12] "GET /earthquakes/predict?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:49:19,235 - INFO - 127.0.0.1 - - [19/Feb/2025 14:49:19] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 14:52:44,118 - INFO - 127.0.0.1 - - [19/Feb/2025 14:52:44] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
