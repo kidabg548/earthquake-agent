@@ -1,58 +1,44 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-from earthquake_data_fetcher import EarthquakeDataFetcher
-from datetime import datetime, timedelta
+import google.generativeai as genai
+from flask import Flask, request, jsonify
+import os  # For environment variables
 
 app = Flask(__name__)
-CORS(app)
 
-@app.route('/earthquakes')
-def get_earthquakes():
+# Get API key from environment variable (recommended)
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    raise ValueError("GOOGLE_API_KEY environment variable not set.")
+
+genai.configure(api_key=GOOGLE_API_KEY)
+
+
+# Load the model
+model = genai.GenerativeModel("gemini-pro")
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.get_json()
+    user_message = data.get("message", "")
+
+    if not user_message:
+        return jsonify({"error": "Message is required"}), 400
+
+    # Input Validation (Example - rudimentary length check)
+    if len(user_message) > 1000:  # Adjust max length as needed
+        return jsonify({"error": "Message is too long"}), 400
+
+    # Sanitize the message (Example - basic removal of HTML tags)
+    # NOTE: This is a very basic example.  Proper sanitization depends on your requirements.
+    # sanitized_message = re.sub("<[^>]*>", "", user_message)  # Remove HTML tags (requires 'import re')
+
     try:
-        fetcher = EarthquakeDataFetcher()
-
-        # Get parameters from the request
-        start_time = request.args.get('starttime')
-        end_time = request.args.get('endtime')
-        min_magnitude = request.args.get('minmagnitude', type=float)  # type=float ensures conversion
-        max_magnitude = request.args.get('maxmagnitude', type=float)
-        min_latitude = request.args.get('minlatitude', type=float)
-        max_latitude = request.args.get('maxlatitude', type=float)
-        min_longitude = request.args.get('minlongitude', type=float)
-        max_longitude = request.args.get('maxlongitude', type=float)
-        limit = request.args.get('limit', type=int)
-        orderby = request.args.get('orderby')
-
-        # Set default time range if not provided
-        if not start_time or not end_time:
-            now = datetime.utcnow()
-            start_time = (now - timedelta(days=7)).isoformat()
-            end_time = now.isoformat()
-
-        # Fetch the earthquake data
-        earthquakes = fetcher.fetch_earthquakes(
-            start_time=start_time,
-            end_time=end_time,
-            min_magnitude=min_magnitude,
-            max_magnitude=max_magnitude,
-            min_latitude=min_latitude,
-            max_latitude=max_latitude,
-            min_longitude=min_longitude,
-            max_longitude=max_longitude,
-            limit=limit,
-            orderby=orderby
-        )
-
-        if earthquakes is None:
-            return jsonify({"error": "Could not retrieve earthquake data"}), 500
-
-        return jsonify(earthquakes)
-
-    except ValueError as e:
-        return jsonify({"error": f"Invalid parameter type: {e}"}), 400  # Bad Request
+        # Get response from Gemini
+        response = model.generate_content(user_message)
+        return jsonify({"response": response.text})
     except Exception as e:
-        print(f"An error occurred: {e}")
-        return jsonify({"error": str(e)}), 500
+        print(f"Error during Gemini API call: {e}")  # Log the error
+        return jsonify({"error": "An error occurred while processing your request."}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+
+if __name__ == "__main__":
+    app.run(debug=True)
