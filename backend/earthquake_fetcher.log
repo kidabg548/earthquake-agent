@@ -3963,3 +3963,25 @@ AttributeError: 'EarthquakeDataFetcher' object has no attribute 'train_earthquak
 2025-02-19 14:44:12,264 - INFO - 127.0.0.1 - - [19/Feb/2025 14:44:12] "GET /earthquakes/predict?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
 2025-02-19 14:49:19,235 - INFO - 127.0.0.1 - - [19/Feb/2025 14:49:19] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
 2025-02-19 14:52:44,118 - INFO - 127.0.0.1 - - [19/Feb/2025 14:52:44] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-19 17:51:34,412 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.120:5000
+2025-02-19 17:51:34,412 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 17:51:34,415 - INFO -  * Restarting with stat
+2025-02-19 17:51:43,474 - WARNING -  * Debugger is active!
+2025-02-19 17:51:43,478 - INFO -  * Debugger PIN: 579-620-689
+2025-02-19 17:53:34,836 - INFO - 127.0.0.1 - - [19/Feb/2025 17:53:34] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 17:53:36,812 - INFO - 127.0.0.1 - - [19/Feb/2025 17:53:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-19 18:31:04,107 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.5:5000
+2025-02-19 18:31:04,108 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 18:31:04,111 - INFO -  * Restarting with stat
+2025-02-19 18:31:15,932 - WARNING -  * Debugger is active!
+2025-02-19 18:31:15,932 - INFO -  * Debugger PIN: 864-740-600
+2025-02-19 18:31:34,192 - INFO - 127.0.0.1 - - [19/Feb/2025 18:31:34] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 18:31:36,208 - INFO - 127.0.0.1 - - [19/Feb/2025 18:31:36] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 18:32:23,312 - INFO - 127.0.0.1 - - [19/Feb/2025 18:32:23] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 18:32:23,834 - INFO - 127.0.0.1 - - [19/Feb/2025 18:32:23] "GET /earthquakes HTTP/1.1" 200 -
