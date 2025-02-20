@@ -3985,3 +3985,27 @@ AttributeError: 'EarthquakeDataFetcher' object has no attribute 'train_earthquak
 2025-02-19 18:31:36,208 - INFO - 127.0.0.1 - - [19/Feb/2025 18:31:36] "GET /earthquakes HTTP/1.1" 200 -
 2025-02-19 18:32:23,312 - INFO - 127.0.0.1 - - [19/Feb/2025 18:32:23] "GET /earthquakes HTTP/1.1" 200 -
 2025-02-19 18:32:23,834 - INFO - 127.0.0.1 - - [19/Feb/2025 18:32:23] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 19:54:33,494 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.5:5000
+2025-02-19 19:54:33,494 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 19:54:33,494 - INFO -  * Restarting with stat
+2025-02-19 19:54:39,626 - WARNING -  * Debugger is active!
+2025-02-19 19:54:39,641 - INFO -  * Debugger PIN: 864-740-600
+2025-02-19 19:56:38,707 - INFO - 127.0.0.1 - - [19/Feb/2025 19:56:38] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-19 19:56:43,037 - INFO - 127.0.0.1 - - [19/Feb/2025 19:56:43] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-20 10:48:02,950 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+2025-02-20 10:48:02,977 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 10:48:02,979 - INFO -  * Restarting with stat
+2025-02-20 10:48:11,767 - WARNING -  * Debugger is active!
+2025-02-20 10:48:12,190 - INFO -  * Debugger PIN: 104-339-076
+2025-02-20 10:48:43,838 - INFO - 127.0.0.1 - - [20/Feb/2025 10:48:43] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-20 10:48:45,644 - INFO - 127.0.0.1 - - [20/Feb/2025 10:48:45] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-20 10:48:49,011 - INFO - 127.0.0.1 - - [20/Feb/2025 10:48:49] "GET /earthquakes HTTP/1.1" 200 -
+2025-02-20 10:51:17,406 - INFO - 127.0.0.1 - - [20/Feb/2025 10:51:17] "GET /earthquakes/nearby?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-20 10:51:44,910 - INFO - 127.0.0.1 - - [20/Feb/2025 10:51:44] "GET /earthquakes/predict?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
+2025-02-20 10:52:14,081 - INFO - 127.0.0.1 - - [20/Feb/2025 10:52:14] "GET /earthquakes/data?latitude=9.145&longitude=40.4897 HTTP/1.1" 200 -
